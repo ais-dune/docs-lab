@@ -1,0 +1,3 @@
+[submodule "docs/contrabass"]
+	path = docs/contrabass
+	url = https://github.com/ais-dune/docs-cb
