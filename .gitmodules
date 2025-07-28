@@ -1,6 +1,0 @@
-[submodule "docs/contrabass"]
-	path = docs/contrabass
-	url = https://github.com/ais-dune/docs-cb
-[submodule "docs/viola"]
-	path = docs/viola
-	url = https://github.com/ais-dune/docs-vi
