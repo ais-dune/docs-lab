@@ -1,0 +1,551 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+
+// @import url(fonts.css);
+// @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Coptic&family=Noto+Sans+JP:wght@100..900&family=Noto+Sans+KR:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Oleo+Script:wght@400;700&display=swap');
+
+@import url('https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css');
+
+body, html {
+  font-family: 'Pretendard Variable', 'Noto Sans KR', 'Segoe UI', 'Malgun Gothic', sans-serif;
+}
+
+pre, code {
+  font-family: 'Pretendard Variable', 'Noto Sans KR', 'Segoe UI', 'Malgun Gothic', sans-serif !important;
+}
+
+@media (min-width: 1024px) {
+  .theme-doc-sidebar-container {
+    width: 220px !important;
+  }
+
+  .theme-doc-main-container {
+    margin-left: 220px !important;
+  }
+
+  .navbar__brand {
+    padding-left: 0.5rem;
+    padding-right: 1rem;
+    margin-top: -5px;
+  }
+
+  .navbar__logo {
+    max-width: 120px; 
+    max-height: 36px;
+    width: 100%;
+    height: auto;
+  }
+
+  .navbar__link:nth-of-type(2) {
+  padding-left: 40px !important;
+  }
+
+}
+
+// .navbar__logo {
+//   height: 4rem;
+// }
+
+.dropdown > .navbar__link:after {
+  border-color: #757575;
+  border-style: solid;
+  border-width: 0 0.1em 0.1em 0;
+  content: '';
+  display: inline-block;
+  margin-left: 0.6em;
+  position: relative;
+  top: -3px;
+  padding: 4px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+// // 모든 드롭다운 링크에서 기본 active 제거
+// .dropdown__link--active {
+//   background-color: unset;
+// }
+
+// // 현재 페이지인 경우에만 스타일 적용
+// .dropdown__link--active[aria-current="page"] {
+//   background-color: var(--ifm-menu-color-background-active);
+// }
+
+:root {
+  /* --ifm-color-primary: #2e8555;
+  --ifm-color-primary-dark: #29784c;
+  --ifm-color-primary-darker: #277148;
+  --ifm-color-primary-darkest: #205d3b;
+  --ifm-color-primary-light: #33925d;
+  --ifm-color-primary-lighter: #359962;
+  --ifm-color-primary-lightest: #3cad6e; */
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+
+  --ifm-color-primary: #222;
+  --ifm-color-primary-dark: #111;
+  --ifm-color-primary-darker: #000;
+  --ifm-color-primary-light: #555;
+  --ifm-color-primary-lighter: #666;
+  --ifm-color-primary-lightest: #888;
+
+  --ifm-link-color: #444;
+  --ifm-link-hover-color: #000;
+
+  --ifm-footer-background-color: #1f1f1f;
+  --ifm-footer-color: #e0e0e0;
+  --ifm-footer-title-color: #ffffff;
+  --ifm-footer-link-color: #bbbbbb;
+  --ifm-footer-link-hover-color: #ffffff;
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  --ifm-color-primary: #25c2a0;
+  --ifm-color-primary-dark: #21af90;
+  --ifm-color-primary-darker: #1fa588;
+  --ifm-color-primary-darkest: #1a8870;
+  --ifm-color-primary-light: #29d5b0;
+  --ifm-color-primary-lighter: #32d8b4;
+  --ifm-color-primary-lightest: #4fddbf;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+.navbar__item {
+  /* font-family: 'Noto Sans KR', 'Segoe UI', sans-serif; */
+  font-family: 'Pretendard Variable', 'Noto Sans KR', sans-serif;
+  font-weight: 500; 
+}
+
+.navbar__item:hover,
+.navbar__link:hover {
+  color: #555; 
+}
+
+.navbar__link--active,
+.navbar__item.navbar__link--active {
+  /* color: #000; */
+  color: #555; 
+  font-weight: 560;
+}
+
+.menu__link {
+  color: #222;
+  font-family: 'Pretendard Variable', sans-serif;
+  font-weight: 400;
+}
+
+.menu__link:hover {
+  color: #555;
+}
+
+.menu__link--active {
+  color: #555;
+  font-weight: 600;
+}
+
+.footer {
+  background-color: #1f1f1f !important;
+  color: #e0e0e0 !important;
+}
+
+.footer a {
+  color: #bbbbbb !important;
+}
+
+.footer a:hover {
+  color: #ffffff !important;
+}
+
+.footer__title {
+  color: #ffffff !important;
+}
+
+// 블로그 서비스 히스토리 overview
+#overview_test {
+  .changelog-service{
+    position: relative;
+    // top: -6px;
+    top: -7px;
+    left: -6px;
+    background-color: transparent !important;
+    a {
+      font-weight: 300 !important;
+      color: grey;
+      // color: var(--ifm-link-color);
+      // &:hover {
+      //   text-decoration: underline;
+      //   color:rgb(19, 19, 19);
+      // }
+      img.ico-link {
+        border: none;
+        cursor: pointer;
+        position: relative;
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        margin-left: 5px;
+        top: 3px;
+      }
+    }
+  }
+  code.changelog-overview {
+    font-weight: 600;
+    // background-color: #f5f5f5;
+    background-color: #fff;
+    color: #353535;
+    top: -7.5px;
+    left: -4px;
+    font-size: 100%;
+  }
+  code.changelog-overview2 {
+    // background-color: rgb(238, 238, 238);
+    // color: #929191;
+    color: #505050;
+    background-color: #f5f5f5;
+    // color: var(--ifm-color-info-dark);
+    font-weight: 500;
+    border: 0.5px;
+    padding: 1px 4px 1px 4px;
+    // left: 4px !important;
+  }
+}
+
+div.history_overview{
+  // 검은 마커가 맨 처음에 떠서 그거 없애기
+  li:first-of-type::marker {
+    content: none;
+  }
+  .changelog-date-dup {
+    display: none;
+  }
+  .changelog-item-dup {
+    display: none;
+  }
+  .changelog-service-dup + .changelog-overview2 {
+    position: relative;
+    top: -6px !important;
+  }
+  .changelog-service-dup + .changelog-overview2 + ul {
+    position: relative;
+    top: -6px !important;
+  }
+  .changelog-service {
+    position: relative;
+    top: -1px;
+    font-size: 85%;
+  }
+  .changelog-overview {
+    position: relative;
+    top: -6px;
+  }
+  code.changelog-overview2 {
+    background-color: rgb(238, 238, 238);
+    color: #929191;
+    // background-color: transparent;
+    // color: var(--ifm-color-info-dark);
+    font-weight: 500;
+    border: 0.5px;
+    padding: 1px 4px 1px 4px;
+  }
+  ul {
+    // padding-left: 18px;
+    padding-left: 75px;
+    list-style: none;
+    padding-top: 0;
+    li {
+      display: block;
+      position: relative;
+      border-left: 1px solid #a8a8a8;
+      line-height: 1.5;
+      padding-top: 0px;
+      padding-bottom: 15px;
+      padding-left: 25px;
+      margin-left: 15px !important;
+
+      // 국문 블로그 날짜
+      & > .changelog-date {
+        position: absolute;
+        left: -85px; 
+        font-size: 75%;
+        top: 8px;
+        transform: translateY(-50%);
+      }
+
+      &::before {
+        content: "\200b";
+        width: 15px;
+        height: 15px;
+        border: 1px solid #a8a8a8;
+        background-color: #fff;
+        border-radius: 50%;
+        position: absolute;
+        top: -3px;
+        left: -8px;
+      }
+
+      &::marker {
+        color: #a8a8a8;
+      }
+
+      &:first-of-type {
+        &::marker {
+          border-left: 1px solid #333;
+        }
+      }
+
+      &:last-of-type {
+        border-left: none;
+      }
+    }
+    ul {
+      border-left: none;
+      list-style: decimal;
+      padding-left: 0;
+      margin-top: -2px;
+      margin-bottom: 12px;
+      width: 110%;
+      li {
+        // 서비스 흐름도 overview 라인 깨짐 수정
+        font-size: 92%;
+        margin-bottom: -1px;
+        padding-left: 5px;
+        padding-bottom: 5px;
+        border-left: none;
+        margin-top: 3px;
+        &::before {
+          content: "• ";
+          border: none;
+          background-color: transparent;
+          top: -2px;
+          font-size: 130%;
+          color: #a8a8a8;
+        }
+        ul {
+          margin: 0 0 2px 0;
+          padding-top: 1px;
+          li:last-of-type {
+            padding-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+code.changelog-service {
+  background-color: rgb(177, 177, 177);
+  color: #fff;
+  // font-family: "Oleo Script";
+  border: 0.5px;
+  padding: 1px 4px 1px 4px;
+}
+code.changelog-service a {
+  color: #fff;
+  text-decoration: none;
+}
+code.changelog-service a:hover code {
+    color: #636363;
+    text-decoration: underline;
+}
+code.changelog-service a:hover {
+  // 오버뷰
+  color: #636363 !important;
+  text-decoration: underline;
+}
+code.changelog-service a:visited {
+    color: #fbf9f9;
+}
+code.changelog-date {
+  // font-family: "Oleo Script";
+  background-color: transparent;
+  border: none;
+  // font-size: .6em;
+  // font-size: 70%;
+}
+code.changelog-overview {
+  background-color: rgb(208, 208, 208);
+  color: #fff;
+  // font-family: "Oleo Script";
+  border: 0.5px;
+  padding: 1px 4px 1px 4px;
+}
+code.history {
+      background-color: rgb(177, 177, 177);
+}
+code.Feature {
+  background-color: #e9f7ed;
+  color: #00b543;
+  border: none;
+  padding: 0 5px 0 5px;
+}
+code.Docs {
+  background-color: #f69c60;
+  color: #fff;
+  border: none;
+  padding: 0 5px 0 5px;
+  font-weight: 500;
+  // font-family: "Oleo Script";
+}
+code.Spec {
+  background-color: #adcbe5;
+  // color: #5587b6;
+  color: #fff;
+  padding: 0 5px 0 5px;
+  border: none;
+  font-weight: 550;
+}
+code.Features {
+  background-color: #fde3f9;
+  color: #fc41e0;
+  border: none;
+  padding: 0 5px 0 5px;
+}
+code.Change, code.Changed {
+  background-color: #fdf3e7;
+  color: #ff8200;
+  border: none;
+  padding: 0 5px 0 5px;
+}
+code.Fixed {
+  background-color: #ddf0ff;
+  color: #296cf2;
+  border: none;
+  padding: 0 5px 0 5px;
+}
+code.New {
+  background-color: #4400CC;
+  color: #fff;
+  border: none;
+  padding: 0 5px 0 5px;
+}
+code.Beta {
+  border-radius: 4px;
+  padding: 0 3px;
+  border: none;
+  background-color: rgb(235, 235, 235);
+  color: rgb(82, 114, 255);
+  font-family: "Oleo Script";
+  margin-top: -4px;
+  font-weight: 300;
+  font-size: 98%;
+}
+code.beta-lab {
+  // border: none;
+  // position: absolute;
+  font-style: italic;
+  font-weight: bold;
+  border-radius: 4px;
+  padding: 0 3px;
+  border: none;
+  background-color: rgb(235, 235, 235);
+  color: rgb(82, 114, 255);
+  font-family: "Oleo Script" !important;
+  margin-top: -4px;
+  font-weight: 300;
+  // font-size: 80%;
+}
+code.newfunc, code.oldfunc {
+  background-color: rgb(232, 225, 255);
+  color: rgb(139, 82, 255);
+  font-family: "Oleo Script" !important;
+  font-weight: 400;
+}
+code.btn {
+  background-color: #fff;
+}
+code.oldfunc {
+  background-color: rgb(230, 230, 230);
+  color: #333;
+}
+
+code.time {
+  background-color: #02B543;
+  color: #fff;
+  font-weight: bold;
+}
+
+.uitext {
+  font-weight: 500;
+  color: #296cf2;
+}
+
+
+.markdown {
+
+  h1 {
+    div.indentTab h4 code, section h4 code {
+      font-size: 1.3rem;
+    }
+  }
+
+  .indentTab {
+    border-left: 1px solid #ddd;
+    > h3 {
+      margin-left: 20px;
+    }
+    > * {
+      margin-left: 50px;
+    }
+    > details {
+      margin-left: 50px;
+    }
+    li p + p img {
+      margin-top: 8px;
+    }
+    > div.theme-admonition {
+      margin-left: 50px;
+    }
+  }
+
+  .indentTab h3 code {
+    font-size: 24px;
+    border: none;
+  }
+
+  h3 sup, .indentTab h3 sup {
+  vertical-align: middle;
+  }
+
+  h4, .indentTab h4 {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 20px;
+  margin-bottom: 8px;
+  code {
+    font-size: 16px;
+    }
+  }
+
+  ul {
+    margin: 0;
+    padding-top: 8px;
+    padding-bottom: 0;
+
+    li {
+      margin: 0;
+      padding-top: 4px;
+      padding-bottom: 4px;
+
+      p {
+        margin: 0;
+        padding: 0;
+      }
+    }
+
+    ul {
+      margin-left: 0.5rem;
+    }
+
+    ol {
+      padding-left: 0.5rem;
+      margin-left: 10px;
+    }
+  }
+
+}
