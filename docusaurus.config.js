@@ -104,11 +104,48 @@ const config = {
           srcDark: 'img/tw_logo_d2.png',
         },
         items: [
+          // {
+          //   type: 'docSidebar',
+          //   sidebarId: 'tutorialSidebar',
+          //   position: 'left',
+          //   label: 'Tutorial',
+          // },
           {
             type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
+            sidebarId: 'cbSidebar',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Contrabass',
+            docId: 'contrabass/introduction.mdx',
+          },
+          {
+            type: 'docSidebar',
+            sidebarId: 'lsSidebar',
+            position: 'left',
+            label: 'License',
+            docId: 'license/lincense.mdx',
+          },
+          {
+            type: 'dropdown',
+            label: 'What\'s New',
+            position: 'left',
+            items: [
+              {
+                type: 'doc',
+                docId: 'release-notes/new-features',
+                // to: 'release-notes/new-features',
+                label: 'New Features',
+                // sidebarId: 'releaseSidebar',
+                // activeBaseRegex: '^/new-features/?$'
+              },
+              {
+                type: 'doc',
+                docId: 'release-notes/release-notes',
+                // to: 'release-notes/release-notes',
+                label: 'Release Notes',
+                // sidebarId: 'releaseSidebar',
+                // activeBaseRegex: '^/release-notes/?$'
+              },
+            ]
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
@@ -121,47 +158,47 @@ const config = {
       footer: {
         style: 'dark',
         links: [
-          {
-            title: 'Docs',
-            items: [
-              {
-                label: 'Tutorial',
-                to: '/docs/intro',
-              },
-            ],
-          },
-          {
-            title: 'Community',
-            items: [
-              {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'X',
-                href: 'https://x.com/docusaurus',
-              },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
-              },
-            ],
-          },
+          // {
+          //   title: 'Docs',
+          //   items: [
+          //     {
+          //       label: 'Tutorial',
+          //       to: '/docs/intro',
+          //     },
+          //   ],
+          // },
+          // {
+          //   title: 'Community',
+          //   items: [
+          //     {
+          //       label: 'Stack Overflow',
+          //       href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+          //     },
+          //     {
+          //       label: 'Discord',
+          //       href: 'https://discordapp.com/invite/docusaurus',
+          //     },
+          //     {
+          //       label: 'X',
+          //       href: 'https://x.com/docusaurus',
+          //     },
+          //   ],
+          // },
+          // {
+          //   title: 'More',
+          //   items: [
+          //     {
+          //       label: 'Blog',
+          //       to: '/blog',
+          //     },
+          //     {
+          //       label: 'GitHub',
+          //       href: 'https://github.com/facebook/docusaurus',
+          //     },
+          //   ],
+          // },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Docs Lab, Inc. Built with Docusaurus.`,
       },
       prism: {
         theme: prismThemes.github,
