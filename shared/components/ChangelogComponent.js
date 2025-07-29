@@ -1,6 +1,6 @@
 // 일단 오버뷰랑 서비스 버전 디스플레이 가리고 br 없애기 (0718 이거 씀)
 import React, { useEffect } from 'react';
-import '@site/src/css/custom.scss';
+import '@shared/css/custom.scss';
 
 const ChangelogComponent = ({ children }) => {
   useEffect(() => {
