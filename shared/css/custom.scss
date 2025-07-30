@@ -165,10 +165,38 @@ pre, code {
   color: #ffffff !important;
 }
 
+// svg 리액트 아이콘 스타일(클래스네임이라 img 미정의)
 // .ic-s {
 //   width: 15px;
 //   height: 15px;
 // }
+
+.ico {
+  width: 18px;
+  height: 18px;
+  position: relative;
+  top: 3px;
+  margin-top: 0px;
+
+  // margin-left: 5px;
+  // top: 3px;
+}
+
+.ico-l {
+  width: 24px;
+  height: 24px;
+  position: relative;
+  top: 3px;
+  margin-top: 0px;
+}
+
+.ico-s {
+  width: 15px;
+  height: 15px;
+  position: relative;
+  top: 3px;
+  margin-top: 0px;
+}
 
 // 블로그 서비스 히스토리 overview
 #overview_test {
