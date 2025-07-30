@@ -5,6 +5,8 @@
 
 * `sync-theme.js`: 컴포넌트 전역 선언(`MDXCompoments.js`) 자동 복사 및 배치
 
+    * docs-lab으로 이동 후 node scripts/sync-theme.js 실행
+
 ## shared/components
 
 * `Status`
