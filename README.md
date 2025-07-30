@@ -1,41 +1,54 @@
-# Website
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+# 공통 Asset 안내 
 
-## Installation
+## scripts
 
-```bash
-yarn
+* `sync-theme.js`: 컴포넌트 전역 선언(`MDXCompoments.js`) 자동 복사 및 배치
+
+## shared/components
+
+* `Status`
+
+    * 릴리스 항목 내 우선 순위 설정
+
+    * 전역 선언
+
+* New Features 내 리스트 재배치
+
+    * `ChangelogComponent`
+
+    * `CustomListItem`
+
+## shared/css
+
+`custom.scss`를 alias로 사용합니다. 상품별 `docusaurus.config.js`에서 css 경로를 수정하세요. 
+
+## shared/img
+
+### 정적 자산 배치 
+
+공통으로 사용하는 이미지 관리 디렉터리입니다. 자동 복사 스크립트를 통해 실제 상품 리포지터리에 복사하는 방식을 권장합니다. Docusaurus 내 설정 시 필요한 일부 이미지(즐겨찾기 아이콘 등)의 경우 alias로 가져올 수 없습니다. 
+
+### 마크다운 문서 내 적용 방식
+
+:::note
+
+이미지와 같은 정적 자산의 경우 alias로 가져오는 방식을 권장하지 않습니다.
+
+:::
+
+#### png 형식
+
+```
+import testIndex from '@shared/img/main_index.png';
+
+<img src={testIndex} />
 ```
 
-## Local Development
+#### svg 형식
 
-```bash
-yarn start
 ```
+import Logo from '@shared/img/ic-link.svg';
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
-
-## Build
-
-```bash
-yarn build
+<Logo />
 ```
-
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
-
-## Deployment
-
-Using SSH:
-
-```bash
-USE_SSH=true yarn deploy
-```
-
-Not using SSH:
-
-```bash
-GIT_USER=<Your GitHub username> yarn deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
