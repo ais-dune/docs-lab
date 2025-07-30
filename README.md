@@ -23,7 +23,7 @@
 
 `custom.scss`를 alias로 사용합니다. 상품별 `docusaurus.config.js`에서 css 경로를 수정하세요. 
 
-## shared/img
+## shared/img, shared/icons
 
 ### 정적 자산 배치 
 
@@ -47,8 +47,10 @@ import testIndex from '@shared/img/main_index.png';
 
 #### svg 형식
 
+공통 아이콘의 경우 리액트 컴포넌트 방식으로 사용합니다. 
+
 ```
-import Logo from '@shared/img/ic-link.svg';
+import Logo from '@shared/icons/ic-link.svg';
 
 <Logo />
 ```
