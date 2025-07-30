@@ -10,9 +10,10 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: '콘트라베이스',
-  tagline: '오케스트로 콘트라베이스 제품을 소개합니다.',
-  favicon: 'img/tw_favicon.ico',
+  title: 'Contrabass',
+  tagline: '콘트라베이스 상품을 소개합니다.',
+  favicon: 'img/common/tw_favicon.ico',
+  deploymentBranch: 'gh-pages',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
@@ -20,15 +21,15 @@ const config = {
   },
 
   // Set the production url of your site here
-  url: 'https://ais-dune.github.io',
+  url: 'https://ais-dune.github.io/',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/docs-lab/',
+  baseUrl: '/docs-cb/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'ais-dune', // Usually your GitHub org/user name.
+  projectName: 'docs-cb', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -54,7 +55,12 @@ const config = {
     },
   },
 
-  plugins: ['docusaurus-plugin-sass'],
+  trailingSlash: false,
+
+  plugins: [
+    'docusaurus-plugin-sass',
+    './plugins/webpack-alias.plugin.js', 
+  ],
 
   presets: [
     [
@@ -85,7 +91,7 @@ const config = {
         },
         theme: {
           // customCss: './src/css/custom.css',
-          customCss: './src/css/custom.scss',
+          customCss:require.resolve('./docs-lab/shared/css/custom.scss'),
         },
       }),
     ],
@@ -95,13 +101,13 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
+      image: 'img/common/docusaurus-social-card.jpg',
       navbar: {
         title: '',
         logo: {
           alt: 'Home Logo',
-          src: 'img/tw_logo_l2.png',
-          srcDark: 'img/tw_logo_d2.png',
+          src: 'img/common/tw_logo_l2.png',
+          srcDark: 'img/common/tw_logo_d2.png',
         },
         items: [
           // {

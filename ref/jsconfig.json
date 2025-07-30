@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@shared/*": ["docs-lab/shared/*"]
+    }
+  },
+  "include": ["src", "docs-lab/shared"]
+}
+
+// import Status from '@shared/components/Status';
+// alias 설정 애디터 내 자동 경로 완성
+// 복사용
