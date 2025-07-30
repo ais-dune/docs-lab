@@ -1,6 +1,10 @@
 
 # 공통 Asset 안내 
 
+## ref
+
+참조용 파일
+
 ## scripts
 
 * `sync-theme.js`: 컴포넌트 전역 선언(`MDXCompoments.js`) 자동 복사 및 배치
